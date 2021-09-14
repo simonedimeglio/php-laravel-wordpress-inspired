@@ -5,7 +5,8 @@ main {
                 .card {
                     margin: 20px 0;
                     padding: 10px;
-                    border-radius: 10px;
+                    border-radius: 0px;
+                    border-color: lightgray;
                     .user {
                         display: flex;
                         align-items: center;
@@ -50,6 +51,17 @@ main {
                             margin-top: 20px;
                             margin-left: 60px;
                             color: rgb(118, 118, 118);
+                        }
+                        .back-link {
+                            margin: 10px 0 10px 60px;
+                            text-decoration: none;
+                            color: #21759b;
+                            cursor: none;
+                            &:hover {
+                                cursor: pointer;
+                                text-decoration: underline;
+                                color: #207fab;
+                            }
                         }
                     }
                 }

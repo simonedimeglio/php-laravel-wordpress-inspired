@@ -7,6 +7,11 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+// FontAwesome
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
 // Partials
-@import "header";
-@import "main";
+@import "home";
+@import "app-header";
+@import "app-main";
+@import "index";
