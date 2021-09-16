@@ -10,10 +10,14 @@ main {
                     .user {
                         display: flex;
                         align-items: center;
+                        padding: 10px;
+                        border-radius: 4px;
+                        background-color: #21759b;
+                        margin-bottom: 20px;
                         .user-img {
                             width: 50px;
                             height: 50px;
-                            border-radius: 50%;
+                            border-radius: 10px;
                             margin-right: 10px;
                             opacity: 0.9;
                             &:hover {
@@ -25,7 +29,7 @@ main {
                         }
                         .user-name {
                             font-weight: bold;
-                            color: #21759b;
+                            color: #ffff;
                             &:hover {
                                 cursor: pointer;
                                 text-decoration: underline;
@@ -35,25 +39,19 @@ main {
                     .content {
                         display: flex;
                         flex-direction: column;
-                        .post-txt {
-                            margin-left: 60px;
-                        }
+                        text-align: center;
                         .post-img {
                             width: 350px;
                             height: 250px;
-                            margin-left: 60px;
-                            margin-bottom: 20px;
                             border-radius: 4px;
                             margin: 0 auto;
                             cursor: pointer;
                         }
                         .date {
-                            margin-top: 20px;
-                            margin-left: 60px;
+                            margin: 20px 0;
                             color: rgb(118, 118, 118);
                         }
                         .back-link {
-                            margin: 10px 0 10px 60px;
                             text-decoration: none;
                             color: #21759b;
                             cursor: none;

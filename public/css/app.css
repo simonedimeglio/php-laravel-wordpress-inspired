@@ -4605,6 +4605,26 @@ readers do not read off random characters that represent icons */
   font-weight: 900; }
 @charset "UTF-8";
 
+.custom-button {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  background-color: #ffff;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.custom-button a {
+  text-decoration: none;
+  color: gray;
+}
+
+.custom-button a:hover {
+  color: #21759b;
+  text-decoration: none;
+}
+
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -15561,23 +15581,28 @@ a.text-dark:focus {
 
 .container .hello-container h1 {
   color: #21759b;
+  margin-bottom: 25px;
 }
 
-.container .hello-container a {
+.container .hello-container .home-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container .hello-container .home-buttons .custom-button a {
   margin-top: 20px;
   text-decoration: none;
   color: gray;
   cursor: none;
-  font-size: 20px;
+  font-size: 15px;
 }
 
-.container .hello-container a:hover {
-  text-decoration: underline;
+.container .hello-container .home-buttons .custom-button a:hover {
   cursor: pointer;
   color: #2d95c5;
 }
 
-.container .hello-container a i {
+.container .hello-container .home-buttons .custom-button a i {
   font-size: 15px;
 }
 
@@ -15596,12 +15621,16 @@ main .container .row .col-md-8 .card {
 main .container .row .col-md-8 .card .user {
   display: flex;
   align-items: center;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #21759b;
+  margin-bottom: 20px;
 }
 
 main .container .row .col-md-8 .card .user .user-img {
   width: 50px;
   height: 50px;
-  border-radius: 50%;
+  border-radius: 10px;
   margin-right: 10px;
   opacity: 0.9;
 }
@@ -15615,7 +15644,7 @@ main .container .row .col-md-8 .card .user .user-img:hover {
 
 main .container .row .col-md-8 .card .user .user-name {
   font-weight: bold;
-  color: #21759b;
+  color: #ffff;
 }
 
 main .container .row .col-md-8 .card .user .user-name:hover {
@@ -15626,30 +15655,23 @@ main .container .row .col-md-8 .card .user .user-name:hover {
 main .container .row .col-md-8 .card .content {
   display: flex;
   flex-direction: column;
-}
-
-main .container .row .col-md-8 .card .content .post-txt {
-  margin-left: 60px;
+  text-align: center;
 }
 
 main .container .row .col-md-8 .card .content .post-img {
   width: 350px;
   height: 250px;
-  margin-left: 60px;
-  margin-bottom: 20px;
   border-radius: 4px;
   margin: 0 auto;
   cursor: pointer;
 }
 
 main .container .row .col-md-8 .card .content .date {
-  margin-top: 20px;
-  margin-left: 60px;
+  margin: 20px 0;
   color: #767676;
 }
 
 main .container .row .col-md-8 .card .content .back-link {
-  margin: 10px 0 10px 60px;
   text-decoration: none;
   color: #21759b;
   cursor: none;
@@ -15661,26 +15683,23 @@ main .container .row .col-md-8 .card .content .back-link:hover {
   color: #207fab;
 }
 
+.posts-container .button-container {
+  display: flex;
+}
+
 .posts-container .table {
   background-color: #ffff;
   border: 1px solid lightgray;
 }
 
 .posts-container .table thead th {
+  background-color: #21759b;
   border-bottom: 0px;
   text-align: center;
-  color: #21759b;
-}
-
-.posts-container .table tbody:hover {
-  cursor: pointer;
+  color: #ffff;
 }
 
 .posts-container .table tbody th {
-  vertical-align: middle;
-}
-
-.posts-container .table tbody td {
   vertical-align: middle;
 }
 
@@ -15690,9 +15709,28 @@ main .container .row .col-md-8 .card .content .back-link:hover {
   border-radius: 4px;
 }
 
+.posts-container .table tbody .actions a {
+  color: gray;
+}
+
+.posts-container .table tbody .actions a i {
+  font-size: 15px;
+}
+
+.posts-container .table tbody .actions a .fa-info-circle:hover {
+  color: green;
+}
+
+.posts-container .table tbody .actions a .fa-wrench:hover {
+  color: orange;
+}
+
+.posts-container .table tbody .actions a .fa-times-circle:hover {
+  color: red;
+}
+
 .posts-container .table tbody .user-row {
   display: flex;
-  align-items: center;
 }
 
 .posts-container .table tbody .user-row .user-name {
@@ -15700,17 +15738,48 @@ main .container .row .col-md-8 .card .content .back-link:hover {
   font-weight: bold;
 }
 
-.posts-container .table tbody .user-row .user-name:hover {
-  text-decoration: underline;
-}
-
 .posts-container .table tbody .user-row img {
   margin-right: 10px;
-  border-radius: 50%;
-  opacity: 0.9;
+  border-radius: 10px;
 }
 
-.posts-container .table tbody .user-row img:hover {
-  opacity: 1;
+.container .button-container {
+  display: flex;
+}
+
+.container form {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding: 40px 20px;
+  background-color: #ffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.container form label {
+  font-size: 15px;
+  color: gray;
+  display: flex;
+  align-items: center;
+}
+
+.container form label i {
+  font-size: 18px;
+  color: gray;
+  margin-right: 10px;
+}
+
+.container form input {
+  margin-bottom: 20px;
+}
+
+.container form .submit-button {
+  background-color: #21759b;
+  color: #ffff;
+  border: 1px solid #ffff;
+  border-radius: 10px;
+  margin-top: 20px;
+  width: 100px;
+  padding: 10px;
 }
 

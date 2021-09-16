@@ -5,8 +5,6 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
 
-            <!-- FOR EACH CICLE -->
-            
             <div class="card">
                 <div class="user">
                     <img class="user-img" src="{{ $post->user_img }}" alt="{{$post->user_name}}'s profile picture" />
@@ -20,7 +18,6 @@
                 </div>
             </div>
             
-
         </div>
     </div>
 </div>

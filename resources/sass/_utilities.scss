@@ -1,0 +1,28 @@
+// Body
+$body-bg: #fffffa;
+
+// Typography
+$font-family-sans-serif: 'Nunito', sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+// Wordpress Color #21759b;
+
+// Buttons
+.custom-button {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    background-color: #ffff;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    a {
+        text-decoration: none;
+        color: gray;
+        &:hover {
+            color: #21759b;
+            text-decoration: none;
+        }
+    }
+}

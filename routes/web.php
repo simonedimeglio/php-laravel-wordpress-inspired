@@ -17,3 +17,6 @@ Route::get('/public', 'PagesController@publicSection');
 
 Route::get('/private', 'PagesController@privateSection');
 
+Route::get('/form', function () {
+    return view('/posts/form');
+});

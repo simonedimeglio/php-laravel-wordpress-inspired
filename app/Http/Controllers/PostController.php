@@ -36,7 +36,27 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $request->validate([
+            'user_name' => 'string',
+            'user_img' => 'url',
+            'post_txt' => 'string',
+            'post_img' => 'url',
+            'post_date' => 'date'
+        ]);
+
+        $data = $request->all();
+
+        $newPost = new Post;
+        $newPost->user_name = $data['user_name'];
+        $newPost->user_img = $data['user_img'];
+        $newPost->post_txt = $data['post_txt'];
+        $newPost->post_img = $data['post_img'];
+        $newPost->post_date = $data['post_date'];
+        $newPost->save();
+
+        // dd('done');
+        return redirect()->route('posts.show', $newPost->id);
     }
 
     /**
