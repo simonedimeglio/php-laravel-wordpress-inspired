@@ -46,12 +46,12 @@
 
                                 <!-- TRIGGER -->
                                 <button type="button" class="destroy" data-toggle="modal"
-                                    data-target="#{{ $post->id }}">
+                                    data-target="#modal-{{ $post->id }}">
                                     <i class=" fas fa-trash-alt"></i>
                                 </button>
 
                                 <!-- MODAL -->
-                                <div class="modal fade" id="{{ $post->id }}" tabindex="-1" role="dialog"
+                                <div class="modal fade" id="modal-{{ $post->id }}" tabindex="-1" role="dialog"
                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
