@@ -28,23 +28,63 @@
             }
             .actions {
                 a {
-                    color: gray; // reset
-                    i {
-                        font-size: 15px;
-                    }
-                    .fa-info-circle {
+                    .info {
+                        color: #ffff;
+                        padding: 1px 5px;
+                        border: 1px solid lightgray;
+                        border-radius: 4px;
+                        margin-bottom: 1px;
                         &:hover {
-                            color: green;
+                            background-color: green;
+                            border-color: #ffff;
+                        }
+                        i {
+                            font-size: 15px;
                         }
                     }
-                    .fa-wrench {
+                    .mod {
+                        color: #ffff;
+                        padding: 1px 5px;
+                        border: 1px solid lightgray;
+                        border-radius: 4px;
+                        margin-bottom: 1px;
                         &:hover {
-                            color: orange;
+                            background-color: orange;
+                            border-color: #ffff;
+                        }
+                        i {
+                            font-size: 15px;
                         }
                     }
-                    .fa-times-circle {
+                }
+                form {
+                    border: none;
+                    padding: 0;
+                    button {
+                        color: #ffff;
+                        padding: 1px 5px;
+                        border: 1px solid lightgray;
+                        border-radius: 4px;
+                        margin-bottom: 1px;
                         &:hover {
-                            color: red;
+                            background-color: red;
+                            border-color: #ffff;
+                        }
+                    }
+                    .modal {
+                        .modal-dialog {
+                            .modal-content {
+                                .modal-footer {
+                                   .back {
+                                       background-color: #21759b;
+                                       color: white;
+                                   } 
+                                   .delete {
+                                       background-color: red;
+                                       color: white;
+                                   }
+                                }
+                            }
                         }
                     }
                 }

@@ -15709,24 +15709,66 @@ main .container .row .col-md-8 .card .content .back-link:hover {
   border-radius: 4px;
 }
 
-.posts-container .table tbody .actions a {
-  color: gray;
+.posts-container .table tbody .actions a .info {
+  color: #ffff;
+  padding: 1px 5px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  margin-bottom: 1px;
 }
 
-.posts-container .table tbody .actions a i {
+.posts-container .table tbody .actions a .info:hover {
+  background-color: green;
+  border-color: #ffff;
+}
+
+.posts-container .table tbody .actions a .info i {
   font-size: 15px;
 }
 
-.posts-container .table tbody .actions a .fa-info-circle:hover {
-  color: green;
+.posts-container .table tbody .actions a .mod {
+  color: #ffff;
+  padding: 1px 5px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  margin-bottom: 1px;
 }
 
-.posts-container .table tbody .actions a .fa-wrench:hover {
-  color: orange;
+.posts-container .table tbody .actions a .mod:hover {
+  background-color: orange;
+  border-color: #ffff;
 }
 
-.posts-container .table tbody .actions a .fa-times-circle:hover {
-  color: red;
+.posts-container .table tbody .actions a .mod i {
+  font-size: 15px;
+}
+
+.posts-container .table tbody .actions form {
+  border: none;
+  padding: 0;
+}
+
+.posts-container .table tbody .actions form button {
+  color: #ffff;
+  padding: 1px 5px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  margin-bottom: 1px;
+}
+
+.posts-container .table tbody .actions form button:hover {
+  background-color: red;
+  border-color: #ffff;
+}
+
+.posts-container .table tbody .actions form .modal .modal-dialog .modal-content .modal-footer .back {
+  background-color: #21759b;
+  color: white;
+}
+
+.posts-container .table tbody .actions form .modal .modal-dialog .modal-content .modal-footer .delete {
+  background-color: red;
+  color: white;
 }
 
 .posts-container .table tbody .user-row {
