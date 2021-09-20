@@ -1,7 +1,6 @@
 <?php
 
-// Post.php it's created by command
-// php artisan make:model Post
+// Post.php created by command "php artisan make:model Post"
 
 namespace App;
 

@@ -2,7 +2,6 @@
 
 @section('content')
     <div class="container">
-
         <div class="button-container">
             <div class="custom-button"><a href="/"><i class="fas fa-home"></i> Home</a></div>
             <div class="custom-button"><a href="/posts"><i class="far fa-list-alt"></i> Posts List</a></div>
@@ -19,10 +18,8 @@
             </div>
         @endif
 
-
         <form action="{{ route('posts.store') }}" method="post">
             @csrf
-
             <label for="name"><i class="fas fa-user"></i> User Name</label>
             <input type="text" name="user_name" id="user_name">
 
@@ -40,6 +37,5 @@
 
             <input class="submit-button" type="submit" value="Submit">
         </form>
-
     </div>
 @endsection

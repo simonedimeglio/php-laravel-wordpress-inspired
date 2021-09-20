@@ -5,7 +5,9 @@
     <div class="hello-container">
         <h1>Welcome in Boolpress</h1>
         <div class="home-buttons">
-            <div class="custom-button"><a href="/form"><i class="fas fa-pencil-alt"></i> New post</a></div>
+            @if(Auth::check())
+                <div class="custom-button"><a href="/form"><i class="fas fa-pencil-alt"></i> New post</a></div>
+            @endif
             <div class="custom-button"><a href="/posts"><i class="far fa-list-alt"></i> Posts List</a></div>
         </div>
     </div>

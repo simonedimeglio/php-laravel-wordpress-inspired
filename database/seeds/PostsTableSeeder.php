@@ -1,8 +1,7 @@
 <?php
-
 use Illuminate\Database\Seeder;
-use App\Post; // to add manually
-use Faker\Generator as Faker; // to add manually
+use App\Post; // manually
+use Faker\Generator as Faker; // manually
 
 class PostsTableSeeder extends Seeder
 {
@@ -16,7 +15,6 @@ class PostsTableSeeder extends Seeder
     public function run(Faker $faker)
     {
         for ($i = 0; $i < 50; $i++) {
-
             $bookObject = new Post();
             $bookObject->user_name = $faker->sentence(5);
             $bookObject->user_img = $faker->imageUrl(640, 480, 'User', true); 
@@ -24,7 +22,6 @@ class PostsTableSeeder extends Seeder
             $bookObject->post_img = $faker->imageUrl(640, 480, 'Post', true);
             $bookObject->post_date= $faker->date('Y_m_d');
             $bookObject->save();
-
         }
     }
 }
