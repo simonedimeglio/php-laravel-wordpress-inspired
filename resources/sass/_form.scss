@@ -9,6 +9,15 @@
         background-color: #ffff;
         display: flex;
         flex-direction: column;
+        .form-title {
+            margin-bottom: 25px;
+            font-size: 18px;
+            color: #21759b;
+            text-align: center;
+        }
+        .user-form {
+            margin-top: 25px;
+        }
         label {
             font-size: 15px;
             color: gray;

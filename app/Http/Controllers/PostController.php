@@ -3,6 +3,8 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use Illuminate\Http\Request;
+use App\PostDetail;
+use App\Category;
 
 class PostController extends Controller
 {
@@ -24,7 +26,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::all();
+        return view('posts.form', compact('categories'));
     }
 
     /**
@@ -37,25 +40,26 @@ class PostController extends Controller
     {
 
         $request->validate([
-            'user_name' => 'string',
+            'user_name' => 'required | string',
             'user_img' => 'url',
             'post_txt' => 'string',
             'post_img' => 'url',
             'post_date' => 'date'
         ]);
 
-        $data = $request->all();
+        // $data = $request->all();
 
-        $newPost = new Post;
-        $newPost->user_name = $data['user_name'];
-        $newPost->user_img = $data['user_img'];
-        $newPost->post_txt = $data['post_txt'];
-        $newPost->post_img = $data['post_img'];
-        $newPost->post_date = $data['post_date'];
-        $newPost->save();
-
-        // dd('done');
-        return redirect()->route('posts.show', $newPost->id);
+        // $newPost = new Post;
+        // $newPost->user_name = $data['user_name'];
+        // $newPost->user_img = $data['user_img'];
+        // $newPost->post_txt = $data['post_txt'];
+        // $newPost->post_img = $data['post_img'];
+        // $newPost->post_date = $data['post_date'];
+        // $newPost->save();
+        $post = new Post();
+        $postDetail = new PostDetail();
+        $this->saveItemFromRequest($post, $postDetail, $request);
+        return redirect()->route('posts.show', $post);
     }
 
     /**
@@ -89,7 +93,7 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update(Request $request, PostDetail $postDetail, Post $post)
     {
         $request->validate([
             'user_name' => 'string',
@@ -99,9 +103,9 @@ class PostController extends Controller
             'post_date' => 'date'
         ]);
 
-        $data = $request->all();
+        // $data = $request->all();
         // $post->update($data);
-        $this->fillAndSavePost($post, $data);
+        $this->saveItemFromRequest($post, $postDetail, $request);
         return redirect()->route('posts.show', $post);
     }
 
@@ -117,12 +121,20 @@ class PostController extends Controller
         return redirect()->route('posts.index');
     }
 
-    private function fillAndSavePost(Post $post, $data) {
+    private function saveItemFromRequest(Post $post, PostDetail $postDetail, Request $request) {
+
+        $data = $request->all(); // data = array
+
+        $postDetail->platform = $data['platform'];
+        $postDetail->tag = $data['tag'];
+        $postDetail->save();
+
         $post->user_name = $data['user_name'];
         $post->user_img = $data['user_img'];
         $post->post_txt = $data['post_txt'];
         $post->post_img = $data['post_img'];
         $post->post_date = $data['post_date'];
+        $post->post_detail_id = $postDetail->id;
         $post->save();
     }
 }

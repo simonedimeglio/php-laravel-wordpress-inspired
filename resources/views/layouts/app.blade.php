@@ -19,8 +19,8 @@
                 <div class="container">
                     <a class="navbar-brand" href="{{ url('/') }}">
                         <!-- {{ config('app.name', 'Wordpress') }} -->
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/WordPress_blue_logo.svg/1024px-WordPress_blue_logo.svg.png"
-                            alt="Wordpress logo">
+                        <i class="fab fa-wordpress-simple"></i>
+                        <div class="fa-wordpress-simple-txt">Boolpress Post Manager</div>
                     </a>
 
                     <button class="navbar-toggler" type="button" data-toggle="collapse"

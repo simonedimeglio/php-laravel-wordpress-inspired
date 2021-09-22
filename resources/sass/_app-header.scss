@@ -1,9 +1,15 @@
 header {
     nav { 
         .navbar-brand {
-            img {
-                width: 50px;
-                cursor: pointer;
+            display: flex;
+            .fa-wordpress-simple {
+                font-size: 40px;
+                color: #21759b;
+                margin-right: 10px;
+            }
+            .fa-wordpress-simple-txt {
+                font-size: 25px;
+                color: #21759b;
             }
         }
     }

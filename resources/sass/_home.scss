@@ -2,21 +2,35 @@
     .hello-container {
         border: 1px solid lightgray;
         border-radius: 10px;
-        background-color: white;
+        background-color: #21759b;
         padding: 40px;
-        height: 400px;
+        height: 600px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        h1 {
-            color: #21759b;
-            margin-bottom: 25px;
+        .welcome-logo {
+            color: #ffff;
+            font-size: 40px;
+            margin-bottom: 10px;
         }
+        h1 {
+            color: #ffff;
+        }
+        .welcome-txt {
+            color: #ffff;
+            width: 70%;
+            margin: 20px auto;
+            text-align: center;
+
+        }
+
         .home-buttons {
-            display: flex;
-            justify-content: space-between;
+            margin: 0 auto;
+            width: 230px;
+
             .custom-button {
+                margin-right: 0;
                 a {
                     margin-top: 20px;
                     text-decoration: none;
