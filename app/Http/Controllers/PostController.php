@@ -27,6 +27,7 @@ class PostController extends Controller
     public function create()
     {
         $categories = Category::all();
+        // dd($categories);
         return view('posts.form', compact('categories'));
     }
 
@@ -135,6 +136,7 @@ class PostController extends Controller
         $post->post_img = $data['post_img'];
         $post->post_date = $data['post_date'];
         $post->post_detail_id = $postDetail->id;
+        $post->category_id = $data['category_id'];
         $post->save();
     }
 }

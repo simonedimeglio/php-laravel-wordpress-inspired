@@ -40,6 +40,22 @@ main {
                         display: flex;
                         flex-direction: column;
                         text-align: center;
+                        .details {
+                            margin: 10px 20px;
+                            background-color: lightgray;
+                            border: .5px solid gray;
+                            border-radius: 4px;
+                            padding: 10px 5px;
+                            display: flex;
+                            justify-content: space-between;
+                            i {
+                                color: #ffff;
+                            }
+                            .fas {
+                                margin-right: 5px;
+                                color: gray;
+                            }
+                        }
                         .post-img {
                             width: 350px;
                             height: 250px;

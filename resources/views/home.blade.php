@@ -10,12 +10,12 @@
         @else 
             <i class="far fa-handshake welcome-logo"></i>
             <h1>Welcome in Boolpress</h1>
-            <div class="welcome-txt">Welcome to the Boolpress post manager. Through authentication you can access the full version which will allow you to add, edit and delete posts, as well as being able to see additional details.</div>
+            <div class="welcome-txt">Welcome to the Boolpress post manager. Through authentication you can access the full version which will allow you to add, edit and delete posts.</div>
         @endif
         
         <div class="home-buttons">
             @if(Auth::check())
-                <div class="custom-button"><a href="/form"><i class="fas fa-pencil-alt"></i> New post</a></div>
+                <div class="custom-button"><a href="/posts/create"><i class="fas fa-pencil-alt"></i> New post</a></div>
             @endif
             <div class="custom-button"><a href="/posts"><i class="far fa-list-alt"></i> Posts List</a></div>
         </div>

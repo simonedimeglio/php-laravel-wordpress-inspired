@@ -15685,6 +15685,25 @@ main .container .row .col-md-8 .card .content {
   text-align: center;
 }
 
+main .container .row .col-md-8 .card .content .details {
+  margin: 10px 20px;
+  background-color: lightgray;
+  border: 0.5px solid gray;
+  border-radius: 4px;
+  padding: 10px 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+main .container .row .col-md-8 .card .content .details i {
+  color: #ffff;
+}
+
+main .container .row .col-md-8 .card .content .details .fas {
+  margin-right: 5px;
+  color: gray;
+}
+
 main .container .row .col-md-8 .card .content .post-img {
   width: 350px;
   height: 250px;
@@ -15834,6 +15853,15 @@ main .container .row .col-md-8 .card .content .back-link:hover {
 
 .container form .user-form {
   margin-top: 25px;
+}
+
+.container form .input-group {
+  margin-bottom: 20px;
+}
+
+.container form .input-group .input-group-text {
+  background-color: #ffff;
+  border-color: lightgray;
 }
 
 .container form label {

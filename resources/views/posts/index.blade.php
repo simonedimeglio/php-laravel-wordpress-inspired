@@ -5,7 +5,7 @@
         <div class="button-container">
             <div class="custom-button"><a href="/"><i class="fas fa-home"></i> Home</a></div>
             @if (Auth::check())
-                <div class="custom-button"><a href="/form"><i class="fas fa-pencil-alt"></i> New</a></div>
+                <div class="custom-button"><a href="/posts/create"><i class="fas fa-pencil-alt"></i> New</a></div>
             @endif
         </div>
 

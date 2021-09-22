@@ -18,6 +18,13 @@
         .user-form {
             margin-top: 25px;
         }
+        .input-group {
+            margin-bottom: 20px;
+            .input-group-text {
+                background-color: #ffff;
+                border-color: lightgray;
+            }
+        }
         label {
             font-size: 15px;
             color: gray;

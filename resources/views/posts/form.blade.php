@@ -43,21 +43,16 @@
 
             {{-- POST DETAIL --}}
             <div class="form-title user-form">
-                <i class="fas fa-asterisk"></i>
+                <i class="fas fa-dna"></i>
                 <span>Post Details</span>
             </div>
-            <label for="platform"><i class="fas fa-share-alt"></i> Platform</label>
-            <input type="text" name="platform" id="platform">
-
-            <label for="tag"><i class="fas fa-tag"></i> Tag</label>
-            <input type="text" name="tag" id="tag">
 
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <label class="input-group-text" for="category_id">Category</label>
+                    <label class="input-group-text" for="category_id"><i class="far fa-hand-point-right"></i>Category</label>
                 </div>
                 <select class="custom-select" id="category_id" name="category_id">
-                    <option selected>Select a category</option>
+                    <option selected></option>
                     @foreach ($categories as $category)
                         <option value="{{$category->id}}">
                             {{ $category->name }}
@@ -66,22 +61,11 @@
                 </select>
             </div>
 
-            {{-- USER DETAIL --}}
-            <div class="form-title user-form">
-                <i class="fas fa-user-secret"></i>
-                <span>User Details</span>
-            </div>
-            <label for="name"><i class="fas fa-signature"></i> Name and Surname</label>
-            <input type="text" name="user_name" id="user_name">
+            <label for="platform"><i class="fas fa-share-alt"></i> Platform</label>
+            <input type="text" name="platform" id="platform">
 
-            <label for="name"><i class="fas fa-globe-americas"></i> Country</label>
-            <input type="text" name="user_name" id="user_name">
-
-            <label for="name"><i class="fas fa-at"></i> Mail</label>
-            <input type="text" name="user_name" id="user_name">
-
-            <label for="name"><i class="fas fa-phone"></i> Phone</label>
-            <input type="text" name="user_name" id="user_name">
+            <label for="tag"><i class="fas fa-tag"></i> Tag</label>
+            <input type="text" name="tag" id="tag">
 
             <input class="submit-button" type="submit" value="Submit">
         </form>
